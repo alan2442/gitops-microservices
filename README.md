@@ -19,9 +19,25 @@ no GitHub.
 
 1.2 - Crie um repositório e coloque somente o arquivo release/kubernetes-manifests.yaml
 
-## 2. Instalando o ArgoCD
-2.1 - Crie uma namespace chamada argocd:
+## 2. Instalando o Rancher Desktop
+2.1 - Baixe o instalador do site oficial: https://rancherdesktop.io
+2.2 - Instale o rancher depois de baixar o instalador.
+2.3 - Depois de instalar  configure o Rancher Desktop 
+2.4 - Vá em Settings → WSL Integration, ative o Ubuntu que você usa no WSL
+2.5 - Isso fará com que o kubectl, nerdctl e o contexto Kubernetes do Rancher Desktop fiquem disponíveis dentro do Ubuntu.
+
+## 3. Instalando o ArgoCD
+3.1 - Crie uma namespace chamada argocd:
 ``` kubectl create namespace argocd ```
-2.2 - Instale o argocd:
+
+3.2 - Instale o argocd:
 
 ```kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```
+
+3.3 - Instale o CLI do argoCD no linux, digite os seguntes comandos:
+
+```curl -SSL -o argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64```
+
+```chmod +x argocd ```
+
+```mv argocd /usr/local/bin/ ```
