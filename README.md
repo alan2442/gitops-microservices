@@ -14,11 +14,14 @@ no GitHub.
 • Docker funcionando localmente 
 
 
-# 1. Baixando os arquivos necessários no github e criando meu diretório público
+## 1. Baixando os arquivos necessários no github e criando meu diretório público
 1.1 - Entre no repositório que contém o site: https://github.com/GoogleCloudPlatform/microservices-demo 
 
 1.2 - Crie um repositório e coloque somente o arquivo release/kubernetes-manifests.yaml
 
-# 2. Instalando o ArgoCD
+## 2. Instalando o ArgoCD
 2.1 - Crie uma namespace chamada argocd:
 ``` kubectl create namespace argocd ```
+2.2 - Instale o argocd:
+
+```kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```
