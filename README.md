@@ -6,11 +6,16 @@ Rancher Desktop, controlado por GitOps com ArgoCD, a partir de um repositório p
 no GitHub. 
 
 # Requisitos:
-• Rancher Desktop  
+• Rancher Desktop
+
 • Kubectl configurado (kubectl get nodes funcionando) 
+
 • ArgoCD instalado no cluster 
+
 • Conta no GitHub com repositório público 
+
 • Git instalado 
+
 • Docker funcionando localmente 
 
 
